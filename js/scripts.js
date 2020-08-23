@@ -97,11 +97,11 @@ window.addEventListener("DOMContentLoaded", function() {
     function success() {
       form.reset();
       button.style = "display: none ";
-      status.innerHTML = "<span style='color: white; border: 3px solid #D3D3D3; border-radius: 5px; padding: 4px 12px;'>Thank you for your email. I'll be in touch promptly!</span>";
+      status.innerHTML = "<span style='color: white;'>Thank you for your email. I'll be in touch promptly!</span>";
     }
 
     function error() {
-      status.innerHTML = "Oops! There was a problem. Please try again.";
+      status.innerHTML = "<span style='color: white;'>Oops! There was a problem. Please try again.</span>";
     }
 
     // handle the form submission event
