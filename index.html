@@ -34,6 +34,28 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <!-- End #mobile-menu-toggle -->
+
+    <!-- Custom Event Tracking Script-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.addEventListener("click", function (event) {
+                if (event.target.tagName === "SUMMARY") {
+                    let clickedID = event.target.id;
+                    
+                    // Push to Google Tag Manager Data Layer
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'summaryClick',
+                        'clickID': clickedID
+                    });
+    
+                    console.log("Clicked ID:", clickedID); // Debugging
+                }
+            });
+        });
+    </script>
+    <!-- Custom Event Tracking Script-->
+
     <header>
         <div id="mobile-menu-close">
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
